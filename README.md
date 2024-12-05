@@ -39,7 +39,7 @@ module "kms" {
 
 **NOTE**: With this configuration, access will be provided to *all* IAM users in the target account. To restrict access, use the `policy_principals` argument detailed in the next section.
 
-`platform` is a parameter for *all* **MDThink Enterprise Terraform** modules. For more information about the `platform`, in particular the permitted values of the nested fields, see the [mdt-eter-platform documentation](https://source.mdthink.maryland.gov/projects/etm/repos/mdt-eter-platform/browse). The following section goes into more detail regarding the `cluster` variable.
+**NOTE**: `platform` is a parameter for *all* **Cumberland Cloud** modules. For more information about the `platform`, in particular the permitted values of the nested fields, refer to the platform module documentation. The following section goes into more detail regarding the `sg` variable.
 
 ### Parameters
 

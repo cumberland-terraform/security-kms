@@ -22,11 +22,11 @@ locals {
                                 ) : ( 
                                     data.aws_iam_policy_document.unmerged.json 
                                 )
-    alias                       = join("-",[    
-                                    "kms",
+    alias                       = upper(join("-",[    
+                                    "KMS",
                                     module.platform.prefix,
                                     var.kms.alias_suffix
-                                ])
+                                ]))
     unmerged_policy_principals  = local.conditions.root_principal ? [
                                     "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"
                                 ] : var.kms.policy_principals
